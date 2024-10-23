@@ -1,47 +1,53 @@
-# Fiix Angular Interview Exercise
+# Angular Interview Exercise
 
 ## Instructions
 
-- Fork this repo and make commits against your forked version
-- Set a timer for 2 hours and complete as many of the following tasks as you can
-  - You will not be assessed on the amount completed - there is more than you are expected to complete in this time
-  - Try to complete a range of different kinds of tasks (style, tests, components, etc.)
-- Use the git CLI (not a GUI like sourcetree) to make commits, as this will trigger a pre-commit hook to auto-format the code
-  - So, no need to worry about code formatting (spacing, new lines, etc.) while writing code as this will be done automatically
+Your task is to complete the blog post web app. There are a list of tasks below that you need to complete. It is not expected that you complete all tasks in the time frame. We will
+reserve the last 10 minutes of the interview to implement the tests.
+
+### Notes
+
 - `BlogService` class provides a mock API to use
   - No changes are required in this file, you can treat it as a generated file
   - If you find you need to change this file you may - please add comments explaining reasoning if so
 - Make use of Angular Material components where possible / where it will save time: https://material.angular.io/components/categories
-- Feel free to use any resources at your disposal (Google, Stack Overflow, etc.)
+- Feel free to ask any questions or make assumptions where appropriate. If you are unsure of something, please say so.
 
 ### Tasks
 
-- Refactor post list cards to use a new component `post-card`
-- Add a new route, component, and form for creating a new post
-  - A button already exists in the header to navigate to this form
-  - Title is required
-  - Description is optional
-  - User should not be allowed to save the record if the form is invalid
-- Make the post detail page fetch the post that the user clicked on
-- Add an edit button onto the post cards that allows the user to edit a post via a new form
-  - Title is required
-  - Description is optional
-  - User should not be allowed to save the record if the form is invalid
-- Add a delete button onto the post cards that allows the user to delete a post
-  - Should refresh the list once the delete is complete
-- Add a footer component
-  - Should stick to the bottom of the screen
-- Add the ability to comment on a post from the post detail page
-- Tests:
-  - Complete stubbed tests
-  - Add any additional tests you think would be valuable
-  - Make any failing tests pass
-- Misc style improvements:
-  - Center create button and blog title veritcally within header
-  - Remove active link styles from blog title
-  - Improve style/layout of post detail page
-  - Improve layout of post list so that multiple posts can appear on a single row
+1. **Refactor Post List**
 
-### Additional information
+   - Refactor and create a new component `post-card`
+   - Use this component to display post cards in the post list
 
-Project generated using Angular CLI to find out more about the project and how to run it go [here](blog-interview/README.md)
+2. **Add "Create Post" Functionality**
+
+   - Add a new route and component for creating a new post
+   - Implement a form with the following requirements:
+     - Title field (required)
+     - Content field (optional)
+     - Form validation to prevent saving if invalid
+   - Note: A navigation button for this form already exists in the header
+
+3. **Enhance Post Detail Page**
+
+   - Correctly implement functionality to fetch and display the specific post that the user clicked on
+
+4. **Add "Edit Post" Functionality**
+
+   - Add an edit button to each post card
+   - Create a new form for editing posts with the following requirements:
+     - Title field (required)
+     - Content field (optional)
+     - Form validation to prevent saving if invalid
+
+5. **Implement "Delete Post" Functionality**
+
+   - Add a delete button to each post card
+   - Implement post deletion
+   - Refresh the post list after successful deletion
+
+6. **Testing**
+   - Complete all stubbed tests
+   - Add additional tests as you see fit
+   - Ensure all tests are passing
